@@ -1,6 +1,0 @@
-RewriteEngine On
-
-### HTTPS
-
-#Error page for all error pages:
-ErrorDocument 404 https://towardsai.net/404?utm_source=contribute.towardsai.net&utm_medium=referral&utm_content=404-status-code

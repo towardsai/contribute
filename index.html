@@ -495,11 +495,9 @@
 
         <!-- Catcha -->
         <script type="text/javascript">
-          var onloadCallback = function() {
-            grecaptcha.render('validator', {
-              'sitekey' : '6LcxIlsaAAAAAODQGInCYaYMmRcofg3otfdBCxWC'
-            });
-          };
+           function onSubmit(token) {
+             document.getElementById("contribute-form").submit();
+           }
         </script>
         <!-- /Catcha -->
     </head>
@@ -564,7 +562,7 @@
                 After being accepted as a writer, you will be able to <a href="https://ws.towardsai.net/submit" target="_blank" rel="noopener">submit your articles directly to our queue</a>.
             </p>
             <hr>
-            <form class="" action="https://formspree.io/f/moqpybpp" method="post">
+            <form id="contribute-form" class="" action="https://formspree.io/f/moqpybpp" method="post">
                 <label class="justify" for="name">Your full name:</label>
                 <input class="form-control" name="Name" id="name" placeholder="Type your answer here..." required="">
                 <label class="justify" for="draft">Link to your draft:</label>
@@ -576,7 +574,8 @@
                 <label for="message">Anything you'd like us to know?</label>
                 <textarea class="form-control" name="Message" id="message" type="email" placeholder="Type your answer here..." required=""></textarea>
                 <div id="validator"></div>
-                <button class="submit" type="submit">Submit</button>
+                <!-- <button class="submit" type="submit">Submit</button> -->
+                <button type="submit" class="g-recaptcha" data-sitekey="6LcxIlsaAAAAAODQGInCYaYMmRcofg3otfdBCxWC" data-callback="onSubmit" data-action="submit">Submit</button>
             </form>
         </section>
         <section id="cookie-consent" class="tai-gdpr-ccpa">
@@ -604,7 +603,7 @@
         </footer>
 
         <!-- Scripts -->
-        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+        <script src="https://www.google.com/recaptcha/api.js" defer></script>
         <script id="custom">
             // Add current year to copyright notices
             document.getElementById("js-current-year").textContent = (new Date().getFullYear());

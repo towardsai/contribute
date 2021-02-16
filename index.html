@@ -492,6 +492,16 @@
                 background-color: unset;
             }
         </style>
+
+        <!-- Catcha -->
+        <script type="text/javascript">
+          var onloadCallback = function() {
+            grecaptcha.render('validator', {
+              'sitekey' : '6LcxIlsaAAAAAODQGInCYaYMmRcofg3otfdBCxWC'
+            });
+          };
+        </script>
+        <!-- /Catcha -->
     </head>
     <body>
         <header>
@@ -565,6 +575,7 @@
                 <input class="form-control" name="CV" id="cv" type="cv" placeholder="https://wwww.linkedin.com/in/username" required="">
                 <label for="message">Anything you'd like us to know?</label>
                 <textarea class="form-control" name="Message" id="message" type="email" placeholder="Type your answer here..." required=""></textarea>
+                <div id="validator"></div>
                 <button class="submit" type="submit">Submit</button>
             </form>
         </section>
@@ -591,6 +602,9 @@
                 | <a href="https://towardsai.net/privacy" target="_blank" rel="noopener" data-wpel-link="internal">Privacy Policy</a>
             </div>
         </footer>
+
+        <!-- Scripts -->
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
         <script id="custom">
             // Add current year to copyright notices
             document.getElementById("js-current-year").textContent = (new Date().getFullYear());
@@ -627,5 +641,6 @@
             })
             ga('send', 'pageview');
         </script>
+        <!-- /Scripts -->
     </body>
 </html>

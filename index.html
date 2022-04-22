@@ -568,18 +568,21 @@
             <hr>
             <form id="contribute-form" class="" action="https://formspree.io/f/moqpybpp" method="post">
                 <label class="justify" for="name">Your full name:</label>
-                <input class="form-control" name="Name" id="name" placeholder="Type your answer here..." required>
+                <input class="form-control" name="Name" id="name" placeholder="Type your answer here..." required/>
                 <label class="justify" for="draft">Link to your draft:</label>
-                <input class="form-control" name="Draft Link" id="draft" placeholder="https://medium.com/@username/draft-example..." required>
+                <input class="form-control" name="Draft Link" id="draft" placeholder="https://medium.com/@username/draft-example..." required/>
                 <label for="email">Your Email Address:</label>
-                <input class="form-control" name="Email" id="email" type="email" placeholder="example@example.com" required>
-                <label for="cv">Link to your Twitter profile if you have any:</label>
-                <input class="form-control" name="Twitter" id="twitter" type="twitter" placeholder="https://twitter.com/username">
+                <input class="form-control" name="Email" id="email" type="email" placeholder="example@example.com" required/>
+                <label for="twitter">Link to your Twitter profile if you have any:</label>
+                <input class="form-control" name="Twitter" id="twitter" type="twitter" placeholder="https://twitter.com/username"/>
                 <label for="cv">Link to your CV or LinkedIn profile:</label>
-                <input class="form-control" name="CV" id="cv" type="cv" placeholder="https://wwww.linkedin.com/in/username" required>
+                <input class="form-control" name="CV" id="cv" type="cv" placeholder="https://wwww.linkedin.com/in/username" required/>
                 <label for="message">Anything you'd like us to know?</label>
-                <textarea class="form-control" name="Message" id="message" type="email" placeholder="Type your answer here..." required></textarea>
+                <textarea class="form-control" name="Message" id="message" type="email" placeholder="Type your answer here..." required/></textarea>
                 <div id="validator"></div>
+                <!--
+                <input class="g-recaptcha submit" onclick="window.location.href = 'https://contribute.towardsai.net/thank-you/';" type="submit" value="Submit" data-sitekey="6LcxIlsaAAAAAODQGInCYaYMmRcofg3otfdBCxWC" data-callback="onSubmit" data-action="submit"/>
+                -->
                 <button type="submit" class="g-recaptcha submit" data-sitekey="6LcxIlsaAAAAAODQGInCYaYMmRcofg3otfdBCxWC" data-callback="onSubmit" data-action="submit">Submit</button>
             </form>
         </section>
